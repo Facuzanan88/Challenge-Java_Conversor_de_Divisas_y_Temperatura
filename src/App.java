@@ -67,5 +67,12 @@ public class App {
 
             }
         }
+
+        boolean seguirPrograma = true;
+        if (elige == 1) {
+            while (seguirPrograma) {
+
+            }
+        }
     }
 }
