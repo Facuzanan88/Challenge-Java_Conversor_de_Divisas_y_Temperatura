@@ -105,15 +105,6 @@ public class App {
                     JOptionPane.showMessageDialog(null, "Programa finalizado");
 
                 }
-
-                /*
-                 * if (cambio.equals("Pesos a Dolares")) {
-                 * double dolares = pesos / 495;
-                 * JOptionPane.showMessageDialog(null,
-                 * pesos + " Pesos Argentinos son " + fahrenheit + " Dolares.");
-                 * }
-                 */
-
             }
         }
     }
