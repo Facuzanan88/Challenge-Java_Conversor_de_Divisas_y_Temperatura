@@ -71,6 +71,19 @@ public class App {
         boolean seguirPrograma = true;
         if (elige == 1) {
             while (seguirPrograma) {
+                String[] opciones = { "Celsius a Fahrenheit", "Celsius a Kelvin" };
+                String cambio = (String) JOptionPane.showInputDialog(null, "Elija una opcion",
+                        "Conversor de Temperatura", JOptionPane.QUESTION_MESSAGE, null, opciones, options[0]);
+
+                String input = JOptionPane.showInputDialog(null, "Ingrese Temperatura");
+                int pesos = 0;
+
+                try {
+                    pesos = Integer.parseInt(input);
+                } catch (NumberFormatException e) {
+                    JOptionPane.showMessageDialog(null, "Valor no valido");
+                    continue;
+                }
 
             }
         }
