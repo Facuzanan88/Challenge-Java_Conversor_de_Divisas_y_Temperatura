@@ -76,14 +76,43 @@ public class App {
                         "Conversor de Temperatura", JOptionPane.QUESTION_MESSAGE, null, opciones, options[0]);
 
                 String input = JOptionPane.showInputDialog(null, "Ingrese Temperatura");
-                int pesos = 0;
+                Double celsius = 0.00;
 
                 try {
-                    pesos = Integer.parseInt(input);
+                    celsius = Double.parseDouble(input);
                 } catch (NumberFormatException e) {
                     JOptionPane.showMessageDialog(null, "Valor no valido");
-                    continue;
+                    System.exit(0);
                 }
+
+                if (cambio.equals("Celsius a Fahrenheit")) {
+                    double fahrenheit = (celsius * 9 / 5) + 32;
+                    JOptionPane.showMessageDialog(null,
+                            celsius + " Grados Celsius equivalen a " + fahrenheit + " Grados Fahrenheit.");
+                }
+
+                if (cambio.equals("Celsius a Kelvin")) {
+                    double kelvin = (celsius + 273.15);
+                    JOptionPane.showMessageDialog(null,
+                            celsius + " Grados Celsius equivalen a " + kelvin + " Grados Kelvin.");
+                }
+
+                int continuar = JOptionPane.showConfirmDialog(null, "Desea seguir usando el conversor?",
+                        input, JOptionPane.YES_NO_OPTION);
+
+                if (continuar == JOptionPane.NO_OPTION) {
+                    seguirPrograma = false;
+                    JOptionPane.showMessageDialog(null, "Programa finalizado");
+
+                }
+
+                /*
+                 * if (cambio.equals("Pesos a Dolares")) {
+                 * double dolares = pesos / 495;
+                 * JOptionPane.showMessageDialog(null,
+                 * pesos + " Pesos Argentinos son " + fahrenheit + " Dolares.");
+                 * }
+                 */
 
             }
         }
